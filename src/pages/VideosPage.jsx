@@ -12,7 +12,7 @@ const allVideos = [
 
 export default function VideosPage() {
   return (
-    <div className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-sky-50">
       <div className="bg-primary py-6 px-4">
         <div className="max-w-6xl mx-auto flex items-center justify-between">
           <Link to="/" className="text-white font-black text-xl">← Quay lại</Link>

@@ -42,7 +42,7 @@ export default function Instructor() {
             {/* Stats */}
             <div className="grid grid-cols-3 gap-4">
               {stats.map((s) => (
-                <div key={s.label} className="text-center bg-gray-50 rounded-xl p-4">
+                <div key={s.label} className="text-center bg-sky-50 rounded-xl p-4">
                   <p className="text-2xl font-black text-primary">{s.value}</p>
                   <p className="text-xs text-gray-500 mt-1">{s.label}</p>
                 </div>

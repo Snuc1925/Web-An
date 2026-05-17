@@ -7,7 +7,7 @@ const plans = [
     btnColor: 'bg-gray-800 hover:bg-gray-700',
     features: [
       'Nền tảng vững chắc để bắt đầu',
-      'Làm chủ công cụ cốt lõi: Veo 3, CapCut Pro',
+      <>Làm chủ công cụ cốt lõi: <strong className="font-black">Veo 3, CapCut Pro</strong></>,
       'Nắm vững quy trình sản xuất',
       'Tư duy: nhìn qua video là biết làm ngay',
       'Hỗ trợ trong thời gian học',
@@ -45,7 +45,7 @@ const plans = [
 
 export default function Pricing({ onRegister }) {
   return (
-    <section id="pricing" className="py-20 bg-gray-50">
+    <section id="pricing" className="py-20 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Bảng giá</p>
@@ -69,8 +69,8 @@ export default function Pricing({ onRegister }) {
               <h3 className="text-xl font-black text-gray-900 mb-2">{p.name}</h3>
               <p className="text-3xl font-black text-primary mb-6">{p.price}</p>
               <ul className="space-y-3 mb-8 flex-1">
-                {p.features.map((f) => (
-                  <li key={f} className="flex items-start gap-2 text-gray-700 text-sm">
+                {p.features.map((f, idx) => (
+                  <li key={idx} className="flex items-start gap-2 text-gray-700 text-sm">
                     <span className="text-green-500 mt-0.5 shrink-0">✓</span>
                     {f}
                   </li>

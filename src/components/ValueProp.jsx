@@ -12,7 +12,7 @@ const features = [
   {
     icon: '🎁',
     title: 'Công cụ miễn phí',
-    desc: 'Cấp tài khoản AI MIỄN PHÍ trong suốt quá trình đào tạo để bạn thỏa sức sáng tạo.',
+    desc: <>Cấp tài khoản <strong className="font-black">AI MIỄN PHÍ</strong> trong suốt quá trình đào tạo để bạn thỏa sức sáng tạo.</>,
   },
   {
     icon: '♾️',
@@ -33,7 +33,7 @@ const features = [
 
 export default function ValueProp({ onRegister }) {
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-20 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Tại sao chọn chúng tôi</p>
@@ -70,7 +70,7 @@ export default function ValueProp({ onRegister }) {
           >
             Đăng ký ngay →
           </button>
-          <p className="mt-2 text-gray-400 text-sm">500+ người đã đăng ký</p>
+          <p className="mt-2 text-sm"><span className="text-2xl md:text-3xl font-extrabold text-primary mr-2">500+</span><span className="text-gray-500">người đã đăng ký</span></p>
         </div>
       </div>
     </section>

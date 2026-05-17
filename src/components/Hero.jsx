@@ -46,7 +46,7 @@ export default function Hero({ onRegister }) {
           </a>
         </div>
 
-        <p className="mt-4 text-blue-200 text-sm">✅ 500+ người đã đăng ký</p>
+        <p className="mt-4 text-sm"><span className="text-2xl md:text-3xl font-extrabold text-yellow-300 mr-2">✅ 500+</span><span className="text-blue-100">người đã đăng ký</span></p>
 
         {/* Scroll indicator */}
         <div className="mt-16 animate-bounce">
