@@ -34,7 +34,7 @@ function HomePage() {
 
 export default function App() {
   return (
-    <BrowserRouter basename="/Web-An">
+    <BrowserRouter basename={import.meta.env.BASE_URL}>
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/videos" element={<VideosPage />} />
