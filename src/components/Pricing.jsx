@@ -32,7 +32,7 @@ const plans = [
   {
     name: '💎 Mentor Đặc Biệt',
     price: '6.900.000₫',
-    originalPrice: '7.500.000₫',
+    originalPrice: '8.500.000₫',
     tag: 'CHỐT LÀ RA TIỀN',
     color: 'border-yellow-400 ring-2 ring-yellow-400',
     btnColor: 'bg-yellow-400 hover:bg-yellow-300 text-gray-900',
@@ -72,10 +72,10 @@ export default function Pricing({ onRegister }) {
               <h3 className="text-xl font-black text-gray-900 mb-2">{p.name}</h3>
               {p.originalPrice ? (
                 <div className="mb-6">
-                  <div className="flex items-center gap-2 mb-1">
-                    <span className="text-red-500 font-bold line-through text-lg">{p.originalPrice}</span>
+                  <div className="flex items-center gap-2 mb-2">
+                    <span className="text-red-500 font-black line-through text-4xl">{p.originalPrice}</span>
                     <span className="bg-red-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                      Tiết kiệm 600.000đ
+                      Tiết kiệm 1.600.000đ
                     </span>
                   </div>
                   <p className="text-4xl font-black text-primary">{p.price}</p>

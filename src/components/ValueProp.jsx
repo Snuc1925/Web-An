@@ -40,9 +40,9 @@ export default function ValueProp({ onRegister }) {
             ⚡ Chỉ sau 3-4 buổi, từ 1 người không biết gì về AI,<br className="hidden md:block" />
             bạn sẽ trở thành <span className="text-primary">nhà sản xuất video AI chuyên nghiệp</span>
           </h2>
-          <div className="inline-block bg-primary/10 text-primary border border-primary/20 rounded-full px-6 py-2 mt-6 font-bold text-3xl md:text-2xl shadow-sm">
+          <h3 className="text-blue-500 font-extrabold text-2xl md:text-3xl mt-6 leading-tight">
             ✅ Đặc quyền chỉ có tại lộ trình đào tạo của mình
-          </div>
+          </h3>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
