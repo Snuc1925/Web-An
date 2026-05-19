@@ -34,11 +34,19 @@ export default function RegisterModal({ isOpen, onClose }) {
     setCopied(true)
     setTimeout(() => setCopied(false), 3000)
 
-    // Open chat window
-    if (platform === 'zalo') {
-      window.open('https://zalo.me/0975107181', '_blank')
-    } else if (platform === 'messenger') {
-      window.open(`https://m.me/an.vb231390?text=${encodeURIComponent(sampleMessage)}`, '_blank')
+    const targetUrl = platform === 'zalo'
+      ? 'https://zalo.me/0975107181'
+      : `https://m.me/an.vb231390?text=${encodeURIComponent(sampleMessage)}`
+
+    // Detect mobile device
+    const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+
+    if (isMobile) {
+      // On mobile, open in same tab to prevent empty 'about:blank' tab
+      window.location.href = targetUrl
+    } else {
+      // On desktop, open in new tab to preserve the landing page
+      window.open(targetUrl, '_blank')
     }
   }
 
