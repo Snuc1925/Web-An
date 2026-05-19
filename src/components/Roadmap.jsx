@@ -40,21 +40,21 @@ export default function Roadmap() {
           <h2 className="text-3xl md:text-4xl font-black text-gray-900">Lộ trình học bài bản</h2>
         </div>
 
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="hidden md:block absolute left-[42px] top-0 bottom-0 w-0.5 bg-primary/20" />
-
-          <div className="space-y-8">
-            {steps.map((s, i) => (
-              <div key={s.num} className="flex gap-6 items-start group">
-                <div className="shrink-0 w-[84px] flex flex-col items-center">
-                  <div className="w-14 h-14 rounded-full bg-primary text-white flex items-center justify-center font-black text-lg shadow-md group-hover:scale-110 transition-transform z-10">
-                    {s.num}
+        <div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {steps.map((s) => (
+              <div
+                key={s.num}
+                className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-all p-6 flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center gap-3 mb-3">
+                    <span className="shrink-0 w-8 h-8 rounded-full bg-primary text-white flex items-center justify-center font-black text-sm shadow-sm">
+                      {s.num}
+                    </span>
+                    <h3 className="font-bold text-gray-900 text-lg leading-tight">{s.title}</h3>
                   </div>
-                </div>
-                <div className="bg-white rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow p-6 flex-1">
-                  <h3 className="font-bold text-gray-900 text-lg mb-2">{s.title}</h3>
-                  <p className="text-gray-600 text-sm leading-relaxed">{s.desc}</p>
+                  <p className="text-gray-600 text-sm leading-relaxed sm:pl-11">{s.desc}</p>
                 </div>
               </div>
             ))}

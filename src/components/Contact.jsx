@@ -36,15 +36,20 @@ export default function Contact({ onRegister }) {
     <footer id="contact" className="bg-gray-900 text-white py-16">
       <div className="max-w-5xl mx-auto px-4">
         {/* CTA block */}
-        <div className="bg-primary rounded-2xl p-8 text-center mb-14 shadow-xl">
-          <h2 className="text-2xl md:text-3xl font-black mb-3">Sẵn sàng trở thành cỗ máy sản xuất video AI?</h2>
-          <p className="text-blue-100 mb-6 text-base">Chỉ 3-4 buổi học — bắt đầu ngay hôm nay!</p>
+        <div className="text-center mb-12">
           <button
             onClick={onRegister}
-            className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-10 py-3 rounded-full transition-all transform hover:scale-105"
+            className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-12 py-4 rounded-full transition-all transform hover:scale-105 text-lg md:text-xl shadow-lg"
           >
-            ĐĂNG KÝ NGAY — MIỄN PHÍ TƯ VẤN
+            ĐĂNG KÝ NGAY — TƯ VẤN MIỄN PHÍ 24/7
           </button>
+        </div>
+
+        {/* Contact Heading */}
+        <div className="text-center mb-8">
+          <h3 className="text-xl md:text-2xl font-black text-white uppercase tracking-wider">
+            Liên hệ với chúng tôi
+          </h3>
         </div>
 
         {/* Contact info */}

@@ -73,10 +73,7 @@ export default function Pricing({ onRegister }) {
               {p.originalPrice ? (
                 <div className="mb-6">
                   <div className="flex items-center gap-2 mb-2">
-                    <span className="text-red-500 font-black line-through text-4xl">{p.originalPrice}</span>
-                    <span className="bg-red-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
-                      Tiết kiệm 1.600.000đ
-                    </span>
+                    <span className="text-red-500 font-black line-through decoration-red-400 text-4xl">{p.originalPrice}</span>
                   </div>
                   <p className="text-4xl font-black text-primary">{p.price}</p>
                 </div>
