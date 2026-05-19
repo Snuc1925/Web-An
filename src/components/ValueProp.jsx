@@ -36,15 +36,11 @@ export default function ValueProp({ onRegister }) {
     <section className="py-20 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Tại sao chọn chúng tôi</p>
-          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
-            HỌC LÀM VIDEO AI — KHOẢN ĐẦU TƯ<br className="hidden md:block" />
-            THÔNG MINH NHẤT NĂM 2026
+          <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Tại sao chọn chúng tôi</p>
+          <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
+            ⚡ Chỉ sau 3-4 buổi, từ 1 người không biết gì về AI,<br className="hidden md:block" />
+            bạn sẽ trở thành <span className="text-primary">nhà sản xuất video AI chuyên nghiệp</span>
           </h2>
-          <p className="text-gray-600 max-w-2xl mx-auto text-base md:text-lg leading-relaxed">
-            Năm 2026, biết dùng AI để làm hình ảnh/video không còn là lợi thế, mà là điều kiện bắt buộc.
-            Tại đây, tôi không chỉ dạy bạn công cụ — tôi trao cho bạn cơ hội thực chiến.
-          </p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -70,7 +66,7 @@ export default function ValueProp({ onRegister }) {
           >
             Đăng ký ngay →
           </button>
-          <p className="mt-2 text-sm"><span className="text-2xl md:text-3xl font-extrabold text-primary mr-2">500+</span><span className="text-gray-500">người đã đăng ký</span></p>
+          <p className="mt-2 text-lg"><span className="text-2xl md:text-3xl font-extrabold text-primary mr-2">500+</span><span className="text-gray-500">người đã đăng ký</span></p>
         </div>
       </div>
     </section>

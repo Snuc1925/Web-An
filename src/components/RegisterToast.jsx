@@ -1,18 +1,39 @@
 import { useState, useEffect, useRef } from 'react'
 
-const NOTIFICATIONS = [
-  { name: 'Minh Tuấn', course: 'Khoá Mentor Đặc Biệt', time: '2 phút trước' },
-  { name: 'Lan Anh', course: 'Khoá Nâng Cao', time: '5 phút trước' },
-  { name: 'Quốc Hùng', course: 'Khoá Cơ Bản', time: '8 phút trước' },
-  { name: 'Thu Hà', course: 'Khoá Mentor Đặc Biệt', time: 'vừa xong' },
-  { name: 'Bảo Châu', course: 'Khoá Nâng Cao', time: '12 phút trước' },
-  { name: 'Đức Mạnh', course: 'Khoá Cơ Bản', time: '1 phút trước' },
-  { name: 'Hồng Nhung', course: 'Khoá Mentor Đặc Biệt', time: '3 phút trước' },
-  { name: 'Văn Tùng', course: 'Khoá Nâng Cao', time: '30 giây trước' },
-  { name: 'Phương Linh', course: 'Khoá Cơ Bản', time: '7 phút trước' },
-  { name: 'Trọng Nghĩa', course: 'Khoá Mentor Đặc Biệt', time: '15 giây trước' },
-  { name: 'Kiều Oanh', course: 'Khoá Nâng Cao', time: '4 phút trước' },
-  { name: 'Thành Đạt', course: 'Khoá Cơ Bản', time: '6 phút trước' },
+const NAMES = [
+  // 3-word names (50 names)
+  'Nguyễn Minh Tuấn', 'Trần Lan Anh', 'Phạm Quốc Hùng', 'Lê Thu Hà', 'Hoàng Bảo Châu',
+  'Nguyễn Đức Mạnh', 'Vũ Hồng Nhung', 'Phan Văn Tùng', 'Đỗ Phương Linh', 'Trịnh Trọng Nghĩa',
+  'Đặng Kiều Oanh', 'Bùi Thành Đạt', 'Dương Hoàng Nam', 'Lý Minh Thư', 'Tống Khánh Linh',
+  'Phùng Tuấn Anh', 'Vương Thùy Chi', 'Ngô Quang Huy', 'Hồ Thanh Hằng', 'Đoàn Duy Khánh',
+  'Mai Quốc Bảo', 'Lâm Thùy Dương', 'Nguyễn Gia Bảo', 'Trần Tiến Dũng', 'Lê Hải Đăng',
+  'Phạm Quang Hải', 'Vũ Minh Hằng', 'Phan Quốc Khánh', 'Đặng Thảo Linh', 'Hoàng Nhật Minh',
+  'Nguyễn Quỳnh Chi', 'Trần Hữu Đạt', 'Lê Hoài Nam', 'Phạm Ngọc Ánh', 'Vũ Hoàng Yến',
+  'Phan Thế Vinh', 'Đặng Minh Khang', 'Hoàng Bảo Nam', 'Nguyễn Ngọc Diệp', 'Trần Tuấn Kiệt',
+  'Lê Phương Thảo', 'Phạm Đăng Khoa', 'Vũ Khánh An', 'Phan Thanh Bình', 'Đặng Đức Duy',
+  'Hoàng Minh Triết', 'Nguyễn Tấn Phát', 'Trần Gia Huy', 'Lê Hữu Phước', 'Phạm Trọng Tấn',
+
+  // 2-word names (50 names)
+  'Bình An', 'Minh An', 'Hoàng Nam', 'Quốc Hùng', 'Lan Anh',
+  'Thu Hà', 'Bảo Châu', 'Đức Mạnh', 'Hồng Nhung', 'Văn Tùng',
+  'Phương Linh', 'Trọng Nghĩa', 'Kiều Oanh', 'Thành Đạt', 'Khánh Linh',
+  'Thùy Chi', 'Quang Huy', 'Thanh Hằng', 'Duy Khánh', 'Quốc Bảo',
+  'Thùy Dương', 'Gia Bảo', 'Tiến Dũng', 'Hải Đăng', 'Quang Hải',
+  'Minh Hằng', 'Quốc Khánh', 'Thảo Linh', 'Nhật Minh', 'Quỳnh Chi',
+  'Hữu Đạt', 'Hoài Nam', 'Ngọc Ánh', 'Hoàng Yến', 'Thế Vinh',
+  'Minh Khang', 'Bảo Nam', 'Ngọc Diệp', 'Tuấn Kiệt', 'Phương Thảo',
+  'Đăng Khoa', 'Khánh An', 'Thanh Bình', 'Đức Duy', 'Minh Triết',
+  'Tấn Phát', 'Gia Huy', 'Hữu Phước', 'Trọng Tấn', 'Nhật Anh'
+]
+
+const COURSES = [
+  'Khoá Mentor Đặc Biệt',
+  'Khoá Nâng Cao',
+  'Khoá Cơ Bản'
+]
+
+const TIMES = [
+  'vừa xong'
 ]
 
 export default function RegisterToast() {
@@ -20,74 +41,82 @@ export default function RegisterToast() {
   const [visible, setVisible] = useState(false)
   const timerRef = useRef(null)
   const hideTimerRef = useRef(null)
-  const indexRef = useRef(0)
 
   const showNext = () => {
-    const item = NOTIFICATIONS[indexRef.current % NOTIFICATIONS.length]
-    indexRef.current += 1
-    setToast(item)
+    // Generate random notification details to make it feel organic and endless
+    const randomName = NAMES[Math.floor(Math.random() * NAMES.length)]
+    const randomCourse = COURSES[Math.floor(Math.random() * COURSES.length)]
+    const randomTime = TIMES[Math.floor(Math.random() * TIMES.length)]
+
+    setToast({ name: randomName, course: randomCourse, time: randomTime })
     setVisible(true)
 
-    // Hide after 8s
+    // Hide after 10s
+    if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
     hideTimerRef.current = setTimeout(() => {
       setVisible(false)
-    }, 8000)
+    }, 10000)
   }
 
   useEffect(() => {
-    // First show after 4s
+    // Show first toast after 5 seconds
     const initial = setTimeout(() => {
       showNext()
-    }, 4000)
+    }, 5000)
 
-    return () => clearTimeout(initial)
+    return () => {
+      clearTimeout(initial)
+      if (timerRef.current) clearTimeout(timerRef.current)
+      if (hideTimerRef.current) clearTimeout(hideTimerRef.current)
+    }
   }, [])
 
   useEffect(() => {
     if (!visible && toast) {
-      // Schedule next after random 20-40s from when it fades out
-      const delay = Math.random() * 20000 + 20000 // 20-40s
+      // Schedule next after random 20-30s
+      const delay = Math.random() * 10000 + 20000
+      if (timerRef.current) clearTimeout(timerRef.current)
       timerRef.current = setTimeout(() => {
         showNext()
       }, delay)
     }
     return () => {
-      clearTimeout(timerRef.current)
+      if (timerRef.current) clearTimeout(timerRef.current)
     }
   }, [visible])
-
-  useEffect(() => {
-    return () => {
-      clearTimeout(timerRef.current)
-      clearTimeout(hideTimerRef.current)
-    }
-  }, [])
 
   if (!toast) return null
 
   return (
     <div
       className={`
-        fixed bottom-4 left-4 z-[90] max-w-[calc(100vw-2rem)] sm:max-w-xs
-        transition-all duration-500 ease-in-out
-        ${visible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 pointer-events-none'}
+        fixed bottom-6 left-6 right-6 sm:right-auto z-[90]
+        mx-auto sm:mx-0 max-w-[420px] w-auto
+        transition-all duration-700 ease-out transform
+        ${visible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-8 scale-95 pointer-events-none'}
       `}
     >
-      <div className="flex items-center gap-3 bg-white rounded-2xl shadow-2xl border border-gray-100 px-4 py-3">
-        {/* Avatar circle */}
-        <div className="shrink-0 w-10 h-10 rounded-full bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center text-white font-bold text-sm">
+      <div className="bg-white/95 backdrop-blur-md rounded-2xl shadow-[0_15px_40px_rgba(0,0,0,0.18)] border border-white/30 p-5 flex items-center gap-4">
+        {/* Animated Avatar */}
+        <div className="shrink-0 w-14 h-14 rounded-full bg-gradient-to-tr from-primary via-blue-500 to-indigo-600 flex items-center justify-center text-white font-black text-xl shadow-md">
           {toast.name.charAt(0)}
         </div>
-        <div className="min-w-0">
-          <p className="text-gray-900 text-sm font-semibold leading-snug truncate">
-            <span className="text-primary">{toast.name}</span> đã đăng ký
+
+        {/* Content */}
+        <div className="flex-1 min-w-0">
+          <p className="text-gray-900 text-base sm:text-lg font-bold leading-snug">
+            <span className="text-primary font-black">{toast.name}</span> đã đăng ký
           </p>
-          <p className="text-gray-500 text-xs truncate">
-            {toast.course} • {toast.time}
+          <p className="text-gray-500 text-sm mt-1 font-medium truncate">
+            {toast.course} <span className="mx-1.5">•</span> <span className="text-primary-light font-bold">{toast.time}</span>
           </p>
         </div>
-        {/* Green dot */}
-        <div className="shrink-0 w-2.5 h-2.5 rounded-full bg-green-400 animate-pulse ml-1" />
+
+        {/* Pulse Green Dot Status indicator */}
+        <div className="shrink-0 relative flex h-4 w-4 ml-1">
+          <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+          <span className="relative inline-flex rounded-full h-4 w-4 bg-green-500"></span>
+        </div>
       </div>
     </div>
   )

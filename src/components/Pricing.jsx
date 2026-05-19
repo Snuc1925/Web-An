@@ -51,7 +51,7 @@ export default function Pricing({ onRegister }) {
     <section id="pricing" className="py-20 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Bảng giá</p>
+          <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Bảng giá</p>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">Chọn lộ trình phù hợp</h2>
           <p className="text-gray-500 max-w-xl mx-auto">
             Đầu tư một lần, kỹ năng dùng cả đời để kiếm tiền.
@@ -70,10 +70,19 @@ export default function Pricing({ onRegister }) {
                 </span>
               )}
               <h3 className="text-xl font-black text-gray-900 mb-2">{p.name}</h3>
-              {p.originalPrice && (
-                <p className="text-gray-400 text-sm line-through mb-0.5">{p.originalPrice}</p>
+              {p.originalPrice ? (
+                <div className="mb-6">
+                  <div className="flex items-center gap-2 mb-1">
+                    <span className="text-red-500 font-bold line-through text-lg">{p.originalPrice}</span>
+                    <span className="bg-red-500 text-white text-[10px] font-extrabold px-2 py-0.5 rounded-full uppercase tracking-wider">
+                      Tiết kiệm 600.000đ
+                    </span>
+                  </div>
+                  <p className="text-4xl font-black text-primary">{p.price}</p>
+                </div>
+              ) : (
+                <p className="text-3xl font-black text-primary mb-6">{p.price}</p>
               )}
-              <p className="text-3xl font-black text-primary mb-6">{p.price}</p>
               <ul className="space-y-3 mb-8 flex-1">
                 {p.features.map((f, idx) => (
                   <li key={idx} className="flex items-start gap-2 text-gray-700 text-sm">

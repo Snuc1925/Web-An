@@ -43,7 +43,7 @@ export default function Contact({ onRegister }) {
             onClick={onRegister}
             className="bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black px-10 py-3 rounded-full transition-all transform hover:scale-105"
           >
-            🚀 ĐĂNG KÝ NGAY — MIỄN PHÍ TƯ VẤN
+            ĐĂNG KÝ NGAY — MIỄN PHÍ TƯ VẤN
           </button>
         </div>
 

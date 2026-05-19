@@ -36,7 +36,7 @@ export default function Roadmap() {
     <section id="roadmap" className="py-20 bg-gradient-to-b from-gray-50 to-white">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Chương trình học</p>
+          <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Chương trình học</p>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900">Lộ trình học bài bản</h2>
         </div>
 

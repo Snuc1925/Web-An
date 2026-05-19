@@ -41,7 +41,7 @@ export default function StudentVideos() {
     <section className="py-20 bg-white">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-12">
-          <p className="text-primary font-semibold uppercase tracking-widest text-sm mb-3">Kết quả thực tế</p>
+          <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Kết quả thực tế</p>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4">
             Video học viên làm sau khi tốt nghiệp
           </h2>

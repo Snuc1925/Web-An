@@ -2,7 +2,7 @@ export default function Hero({ onRegister }) {
   return (
     <section
       id="home"
-      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-blue-700 to-blue-900 overflow-hidden pt-20"
+      className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-primary via-blue-700 to-blue-900 overflow-hidden pt-28"
     >
       {/* Background decoration */}
       <div className="absolute inset-0 opacity-10">
@@ -17,9 +17,9 @@ export default function Hero({ onRegister }) {
         </div>
 
         {/* Main headline */}
-        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black leading-tight mb-6 uppercase">
-          HỌC LÀM VIDEO AI —<br className="hidden sm:block" />
-          <span className="text-yellow-300">KHOẢN ĐẦU TƯ THÔNG MINH NHẤT NĂM 2026</span>
+        <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-black mb-6 uppercase leading-tight">
+          <span className="block mb-4">HỌC LÀM VIDEO AI</span>
+          <span className="block text-yellow-300 leading-snug">KHOẢN ĐẦU TƯ THÔNG MINH NHẤT NĂM 2026</span>
         </h1>
 
         {/* Subtext */}
@@ -33,13 +33,14 @@ export default function Hero({ onRegister }) {
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-6">
           <button
             onClick={onRegister}
-            className="relative bg-yellow-400 hover:bg-yellow-300 text-gray-900 font-black text-lg px-10 py-4 rounded-full shadow-xl transition-all transform hover:scale-105 active:scale-95 overflow-hidden group"
+            className="relative bg-gradient-to-r from-yellow-400 via-amber-300 to-yellow-500 hover:from-yellow-300 hover:to-yellow-400 text-gray-900 font-black text-xl px-12 py-5 rounded-full transition-all duration-300 transform hover:scale-105 active:scale-95 overflow-hidden group animate-cta-float animate-cta-glow select-none"
           >
             {/* Shimmer effect */}
-            <span className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/40 to-transparent skew-x-12" />
+            <span className="btn-shimmer-overlay" />
+
             {/* Pulse ring */}
-            <span className="absolute inset-0 rounded-full animate-ping bg-yellow-400 opacity-30" />
-            <span className="relative">🚀 ĐĂNG KÝ NGAY</span>
+            <span className="absolute inset-0 rounded-full animate-ping bg-yellow-400 opacity-20 group-hover:opacity-40 transition-opacity" />
+            <span className="relative flex items-center justify-center gap-2 tracking-wider"> ĐĂNG KÝ NGAY</span>
           </button>
           <a
             href="#roadmap"
@@ -49,18 +50,12 @@ export default function Hero({ onRegister }) {
           </a>
         </div>
 
-        <p className="text-sm mb-10">
+        <p className="text-lg mb-10">
           <span className="text-2xl md:text-3xl font-extrabold text-yellow-300 mr-2">✅ 500+</span>
           <span className="text-blue-100">người đã đăng ký</span>
         </p>
 
-        {/* Secondary callout */}
-        <div className="inline-block bg-white/15 backdrop-blur border border-white/25 rounded-2xl px-6 py-4 text-center max-w-xl mx-auto">
-          <p className="text-white font-bold text-base sm:text-lg leading-snug">
-            ⚡ Chỉ sau 3-4 buổi, từ 1 người không biết gì về AI,<br className="hidden sm:block" />
-            bạn sẽ trở thành <span className="text-yellow-300 font-black">nhà sản xuất video AI chuyên nghiệp</span>
-          </p>
-        </div>
+
 
         {/* Scroll indicator */}
         <div className="mt-12 animate-bounce">
