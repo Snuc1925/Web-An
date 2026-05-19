@@ -17,7 +17,7 @@ export default function Instructor() {
           {/* Avatar / Photo - Rectangular */}
           <div className="w-full max-w-lg rounded-2xl overflow-hidden shadow-2xl border-4 border-primary">
             <img
-              src="/Web-An/anhgroupan.jpg"
+              src={`${import.meta.env.BASE_URL}anhgroupan.jpg`}
               alt="Giảng viên Binh An"
               className="w-full h-auto object-cover"
             />
