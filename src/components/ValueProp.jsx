@@ -36,11 +36,11 @@ export default function ValueProp({ onRegister }) {
     <section className="py-20 bg-sky-50">
       <div className="max-w-6xl mx-auto px-4">
         <div className="text-center mb-14">
-          <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Tại sao chọn chúng tôi</p>
           <h2 className="text-3xl md:text-4xl font-black text-gray-900 mb-4 leading-tight">
             ⚡ Chỉ sau 3-4 buổi, từ 1 người không biết gì về AI,<br className="hidden md:block" />
             bạn sẽ trở thành <span className="text-primary">nhà sản xuất video AI chuyên nghiệp</span>
           </h2>
+          <p className="text-primary font-bold text-lg mt-4">✅ ĐẶC QUYỀN CHỈ CÓ TẠI LỘ TRÌNH ĐÀO TẠO CỦA MÌNH</p>
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
@@ -59,7 +59,6 @@ export default function ValueProp({ onRegister }) {
         </div>
 
         <div className="text-center">
-          <p className="text-primary font-bold text-lg mb-1">✅ ĐẶC QUYỀN CHỈ CÓ TẠI LỘ TRÌNH ĐÀO TẠO CỦA MÌNH</p>
           <button
             onClick={onRegister}
             className="mt-4 bg-primary hover:bg-primary-dark text-white font-bold text-base px-10 py-3 rounded-full transition-colors shadow-md"
