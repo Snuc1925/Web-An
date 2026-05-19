@@ -14,10 +14,14 @@ export default function Instructor() {
         </div>
 
         <div className="flex flex-col md:flex-row items-center gap-12">
-          {/* Avatar placeholder */}
+          {/* Avatar / Photo */}
           <div className="shrink-0">
-            <div className="w-48 h-48 rounded-full bg-gradient-to-br from-primary to-blue-400 flex items-center justify-center shadow-xl">
-              <span className="text-7xl">👨‍💻</span>
+            <div className="w-48 h-48 rounded-full overflow-hidden shadow-xl border-4 border-primary">
+              <img
+                src="/Web-An/anhgroupan.jpg"
+                alt="Giảng viên Binh An"
+                className="w-full h-full object-cover"
+              />
             </div>
           </div>
 

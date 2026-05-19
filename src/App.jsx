@@ -9,6 +9,7 @@ import Pricing from './components/Pricing'
 import Instructor from './components/Instructor'
 import Contact from './components/Contact'
 import RegisterModal from './components/RegisterModal'
+import RegisterToast from './components/RegisterToast'
 import VideosPage from './pages/VideosPage'
 import './index.css'
 
@@ -26,6 +27,7 @@ function HomePage() {
       <Instructor />
       <Contact onRegister={() => setModalOpen(true)} />
       <RegisterModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
+      <RegisterToast />
     </>
   )
 }

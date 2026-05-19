@@ -1,7 +1,8 @@
 const plans = [
   {
     name: 'Cơ Bản',
-    price: '2.500.000đ',
+    price: '2.500.000₫',
+    originalPrice: null,
     tag: null,
     color: 'border-gray-200',
     btnColor: 'bg-gray-800 hover:bg-gray-700',
@@ -15,7 +16,8 @@ const plans = [
   },
   {
     name: 'Nâng Cao',
-    price: '5.500.000đ',
+    price: '5.500.000₫',
+    originalPrice: null,
     tag: 'Phổ biến',
     color: 'border-primary ring-2 ring-primary',
     btnColor: 'bg-primary hover:bg-primary-dark',
@@ -29,7 +31,8 @@ const plans = [
   },
   {
     name: '💎 Mentor Đặc Biệt',
-    price: '6.900.000đ',
+    price: '6.900.000₫',
+    originalPrice: '7.500.000₫',
     tag: 'CHỐT LÀ RA TIỀN',
     color: 'border-yellow-400 ring-2 ring-yellow-400',
     btnColor: 'bg-yellow-400 hover:bg-yellow-300 text-gray-900',
@@ -67,6 +70,9 @@ export default function Pricing({ onRegister }) {
                 </span>
               )}
               <h3 className="text-xl font-black text-gray-900 mb-2">{p.name}</h3>
+              {p.originalPrice && (
+                <p className="text-gray-400 text-sm line-through mb-0.5">{p.originalPrice}</p>
+              )}
               <p className="text-3xl font-black text-primary mb-6">{p.price}</p>
               <ul className="space-y-3 mb-8 flex-1">
                 {p.features.map((f, idx) => (

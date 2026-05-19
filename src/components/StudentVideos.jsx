@@ -46,7 +46,7 @@ export default function StudentVideos() {
             Video học viên làm sau khi tốt nghiệp
           </h2>
           <p className="text-gray-500 max-w-xl mx-auto">
-            Những sản phẩm video AI chất lượng cao được tạo ra ngay sau khi kết thúc khóa học
+            Những sản phẩm video AI chất lượng cao được học viên tạo ra ngay sau khi kết thúc khoá học
           </p>
         </div>
 
