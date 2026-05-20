@@ -33,7 +33,7 @@ const steps = [
 
 export default function Roadmap() {
   return (
-    <section id="roadmap" className="py-20 bg-gradient-to-b from-gray-50 to-white">
+    <section id="roadmap" className="py-20 bg-sky-50">
       <div className="max-w-5xl mx-auto px-4">
         <div className="text-center mb-14">
           <p className="text-primary font-semibold uppercase tracking-widest text-lg mb-3">Chương trình học</p>

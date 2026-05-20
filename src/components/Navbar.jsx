@@ -6,8 +6,8 @@ export default function Navbar({ onRegister }) {
   const links = [
     { label: 'Trang chủ', href: '#home' },
     { label: 'Lộ trình', href: '#roadmap' },
-    { label: 'Khóa học', href: '#pricing' },
     { label: 'Giảng viên', href: '#instructor' },
+    { label: 'Khóa học', href: '#pricing' },
     { label: 'Liên hệ', href: '#contact' },
   ]
 

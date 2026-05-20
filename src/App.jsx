@@ -23,8 +23,8 @@ function HomePage() {
       <ValueProp onRegister={() => setModalOpen(true)} />
       <StudentVideos />
       <Roadmap />
-      <Pricing onRegister={() => setModalOpen(true)} />
       <Instructor />
+      <Pricing onRegister={() => setModalOpen(true)} />
       <Contact onRegister={() => setModalOpen(true)} />
       <RegisterModal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
       <RegisterToast />

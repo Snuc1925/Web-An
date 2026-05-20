@@ -33,7 +33,7 @@ const COURSES = [
 ]
 
 const TIMES = [
-  'vừa xong'
+  'Vừa xong'
 ]
 
 export default function RegisterToast() {
@@ -73,8 +73,8 @@ export default function RegisterToast() {
 
   useEffect(() => {
     if (!visible && toast) {
-      // Schedule next after random 20-30s
-      const delay = Math.random() * 10000 + 20000
+      // Schedule next after random 30-60s
+      const delay = Math.random() * 30000 + 30000
       if (timerRef.current) clearTimeout(timerRef.current)
       timerRef.current = setTimeout(() => {
         showNext()
