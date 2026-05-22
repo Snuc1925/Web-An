@@ -8,7 +8,7 @@ const plans = [
     btnColor: 'bg-gray-800 hover:bg-gray-700',
     features: [
       'Nền tảng vững chắc để bắt đầu',
-      <>Làm chủ công cụ cốt lõi: <strong className="font-black">Veo 3, CapCut Pro</strong></>,
+      <>Làm chủ công cụ cốt lõi: Veo 3, Capcut Pro</>,
       'Nắm vững quy trình sản xuất',
       'Tư duy: nhìn qua video là biết làm ngay',
       'Hỗ trợ trong thời gian học',
@@ -18,12 +18,11 @@ const plans = [
     name: 'Nâng Cao',
     price: '5.500.000₫',
     originalPrice: null,
-    tag: 'Phổ biến',
+    tag: null,
     color: 'border-primary ring-2 ring-primary',
     btnColor: 'bg-primary hover:bg-primary-dark',
     features: [
-      'Tất cả trong Khoá Cơ Bản',
-      'Học gần như toàn bộ công cụ AI tối tân',
+      'Học tất cả các công cụ AI trong khóa cơ bản và các công cụ nâng cao hơn như: Kling, Minimax, Elevenlabs,...',
       'Đột phá tư duy & kỹ thuật chuyên sâu',
       'Thực hiện mọi dạng video đơn giản → phức tạp',
       'Hỗ trợ sau khóa học',
@@ -37,7 +36,7 @@ const plans = [
     color: 'border-yellow-400 ring-2 ring-yellow-400',
     btnColor: 'bg-yellow-400 hover:bg-yellow-300 text-gray-900',
     features: [
-      'Tất cả trong Khoá Nâng Cao',
+      'Đây là sự lựa chọn của người thông minh, thích sự nhanh gọn, không muốn lãng phí thời gian mày mò giữa biển lớn lộn xộn kiến thức',
       'Đồng hành trực tiếp trong quá trình làm việc',
       'Kiếm tiền ngay trong khoá học',
       'Định hướng "đào vàng" hiệu quả từ AI',
